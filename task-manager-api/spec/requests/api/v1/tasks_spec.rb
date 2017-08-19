@@ -5,7 +5,7 @@ RSpec.describe 'Task API' do
   let(:user) { create(:user) }
   let(:headers) do
     {
-       "Accept" => "application/vnd.taskmanager.v1",
+       "Accept" => "application/vdn.taskmanager.v1",
        'Content-type' => 'application/json',
        'Authorization' => user.auth_token
     }
