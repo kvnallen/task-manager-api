@@ -139,7 +139,7 @@ RSpec.describe 'Task API' do
     end
 
     it 'removes the task from the database' do
-      expect { User.find(task.id) }.to raise_error(ActiveRecord::RecordNotFound)
+      expect { Task.find(task.id) }.to raise_error(ActiveRecord::RecordNotFound)
     end
   end
 

@@ -8,7 +8,7 @@ RSpec.describe 'Sessions API', type: :request do
   let(:user) { create(:user) }
   let(:headers) do
     {
-      'Accept' => 'application/vnd.taskmanager.v2',
+      'Accept' => 'application/vdn.taskmanager.v2',
       'Content-Type' => Mime[:json].to_s
     }
   end
@@ -27,7 +27,7 @@ RSpec.describe 'Sessions API', type: :request do
 
       it 'returns the json data for the user with auth token' do
         user.reload
-        expect(json_body[:auth_token]).to eq(user.auth_token)
+        expect(json_body[:data][:attributes][:'auth-token']).to eq(user.auth_token)
       end
     end
 
